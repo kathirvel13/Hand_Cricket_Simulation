@@ -31,7 +31,7 @@ There are a few kinds of delimiters. The default Jinja delimiters are configured
 {% endif %}
 ```
 
-###  For Loop
+### For Loop
 ```html
 <h1>Members</h1>
 <ul>
