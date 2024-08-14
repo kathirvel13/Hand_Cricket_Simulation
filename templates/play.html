@@ -6,4 +6,11 @@
 
 {% block body %}
     <h1>Toss</h1>
+    <form action="/play" method="post">
+        <input name="head" id="head" type="radio">
+        <label for="head">Heads</label>
+        <input name="tail" id="tail" type="radio">
+        <label for="tail">Tails</label><br>
+        <button type="submit">Toss</button>
+    </form>
 {% endblock %}

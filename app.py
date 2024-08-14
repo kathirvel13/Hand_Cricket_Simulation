@@ -10,10 +10,10 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 def index():
     return render_template("index.html")
 
-@app.route("/instruction")
+'''@app.route("/instruction")
 def instruction():
-    return render_template("instruction.html")
+    return render_template("instruction.html")'''
 
-@app.route("/play")
+@app.route("/play", methods=["GET", "POST"])
 def instruction():
     return render_template("play.html")
