@@ -1,4 +1,8 @@
 from flask import Flask, redirect, render_template, request
+from cricmodules import *
+
+# Global Variables
+usropt = []
 
 # Configure application
 app = Flask(__name__)
@@ -14,6 +18,9 @@ def index():
 def instruction():
     return render_template("instruction.html")'''
 
-@app.route("/play", methods=["GET", "POST"])
+@app.route("/toss", methods=["GET", "POST"])
 def instruction():
-    return render_template("play.html")
+    usropt[0] = request.form.get('toss')
+    usropt[1] = request.form.get("play")
+    tosswin = toss(usropt)
+    return render_template("toss.html")

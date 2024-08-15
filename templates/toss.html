@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Toss
+{% endblock %}
+
+{% block body %}
+    <h1>Toss</h1>
+    <form action="/play" method="post">
+        <h3>Heads or Tails</h3>
+        <input name="toss" value="bat" type="radio">
+        <input name="toss" value="bowl" type="radio"><br>
+        <h3>Bat or Bowl</h3>
+        <input name="play" value="Batting" type="radio">
+        <input name="play" value="Bowling" type="radio"><br>
+        <button type="submit">Toss</button>
+    </form>
+{% endblock %}
